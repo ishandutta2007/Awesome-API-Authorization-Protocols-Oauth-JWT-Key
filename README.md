@@ -32,67 +32,28 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global Identity and Access Management (IAM) and Customer IAM (CIAM) market is estimated at **$20B–$26B in 2024–2025** and projected to exceed **$30B by 2027**, compounding at an annual growth rate of 12%–16%. The industry exhibits a **moderately concentrated, bifurcated structure**: while massive enterprise workforce and CIAM deployments are dominated by a handful of consolidating giants (Okta/Auth0, Ping Identity/ForgeRock, Microsoft Entra ID), the developer-facing authentication, API authorization, and passwordless segments remain dynamic and moderately fragmented, with fast-growing specialized innovators (Clerk, Descope, Stytch, FusionAuth) capturing modern cloud-native and AI-agent workloads.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **Auth0**
-
-  **Developer-friendly identity platform** for authentication and authorization. **Pricing**: **Free tier** (limited MAU); **Essentials from $35/month**; **Professional from $240/month**; **Enterprise** quote-only . **Free tier**: Yes, limited MAU. **Best for**: developers wanting the most polished OAuth/OIDC implementation with extensive documentation and SDKs—**trade-off**: premium pricing at scale; CIAM focus rather than workforce identity.
-
-
-
-- **Okta**
-
-  **Workforce and customer identity platform**. **Pricing**: **Starter $6/seat/month**; **Essentials $17/seat/month**; **Professional** and **Enterprise** quote-only . **Free tier**: No free plan; trial available . **Best for**: enterprises needing workforce SSO and lifecycle management alongside OAuth/OIDC—**trade-off**: customer identity is built on Auth0 (Okta-owned), so evaluate Auth0 for CIAM .
-
-
-
-- **Ping Identity (including ForgeRock)**
-
-  **Enterprise identity platform** for complex customer journeys and federation. **Pricing**: Quote-only; enterprise contracts . **Free tier**: None. **Best for**: large enterprises needing orchestration, fraud signals, and flexible deployment—**trade-off**: heavier implementation; quote-based pricing.
-
-
-
-- **Stytch**
-
-  **API-first passwordless authentication** platform. **Pricing**: **Free tier** available; **custom pricing** for paid plans . **Free tier**: Yes. **Best for**: technical teams wanting passwordless methods, device fingerprinting, and fraud signals—**trade-off**: less established than Auth0 or Okta.
-
-
-
-- **Clerk**
-
-  **Prebuilt authentication components** for modern JavaScript frameworks. **Pricing**: **Hobby $0/month**; **Pro $25/month**; **Business $300/month**; **Enterprise** quote-only . **Free tier**: Yes, Hobby plan. **Best for**: small teams wanting to ship quickly with prebuilt sign-in, sign-up, and user-profile UI—**trade-off**: framework-specific; less flexible for non-JS stacks.
-
-
-
-- **FusionAuth**
-
-  **Self-hostable or cloud identity platform** with a free community edition. **Pricing**: **Community $0/month** (self-hosted); **Starter $162/month** (cloud, 1K MAU); **Essentials $240/month**; **Enterprise** quote-only . **Free tier**: Yes, Community Edition. **Best for**: teams wanting data control and single-tenant deployments with predictable costs—**trade-off**: mid-market pricing; less brand recognition than Auth0.
-
-
-
-- **Descope**
-
-  **Visual flow-based authentication** platform. **Pricing**: **Free Forever $0/month**; **Pro $249/month**; **Growth $799/month**; **Enterprise** quote-only . **Free tier**: Yes, Free Forever plan. **Best for**: teams wanting no-code authentication flows covering passwordless, MFA, and SSO—**trade-off**: newer platform; visual editor may limit complex custom logic.
-
-
-
-- **Postman**
-
-  **API platform with built-in authentication management**. **Pricing**: **Free $0** (single-user only as of March 2026); **Solo**; **Team $14/user/month**; **Enterprise** . **Free tier**: Yes, 100 AI credits . **Best for**: developers wanting to manage API auth during development and testing—**not** a production authorization server.
-
-
+| Platform | Company Scale (Valuation / Revenue) | Starting Paid Pricing | Free Tier Limits | Description & Best For | Trade-offs |
+|---|---|---|---|---|---|
+| **Okta** | **$15.3B Market Cap** ($2.61B ARR in FY2025) | Starter from **$6/user/month** (Essentials from $17/user/month; Workforce IAM) | **30-day free trial** (Includes SSO, Universal Directory, & Adaptive MFA for up to 100 test users; Integrator developer tier available) | Enterprise workforce identity, lifecycle management, and enterprise SSO alongside OAuth/OIDC. | Workforce-centric; customer identity is delegated to Auth0; complex enterprise procurement. |
+| **Auth0** *(by Okta)* | **$6.5B Acquisition Valuation** (~$350M+ ARR at acquisition) | Essentials from **$35/month** (Professional from $240/month; Enterprise custom) | **Free forever up to 25,000 MAUs** (Unlimited social connections, basic MFA, custom domains, and community support) | Developer-friendly CIAM with polished OAuth 2.0/OIDC implementation, extensive SDKs, and Quickstarts. | Premium steep pricing curve as MAUs scale beyond entry tiers; CIAM focus rather than internal employee SSO. |
+| **Postman** | **$5.6B Peak Valuation** (~$313M estimated ARR) | Solo from **$9/month** (Team collaboration from $19/user/month billed annually) | **Free forever for 1 user** (Unlimited collection runs, unlimited local/cloud mock servers, 1,000 API monitoring calls/mo, and 50–100 AI credits/mo; no team workspaces) | API client and platform with built-in OAuth 1.0/2.0, JWT, and API Key authorization debugging/testing. | Development & testing tool only; **not** a production authorization or token-issuing identity server. |
+| **Ping Identity** *(incl. ForgeRock)* | **$2.8B Acquisition Value** (~$300M+ ARR when taken private by Thoma Bravo) | **Custom Enterprise Quote** (Annual contract starting at ~$20,000+/year) | **30-day free trial** (Full feature access to PingOne orchestration, SSO, MFA, and user directories in trial sandbox) | Complex enterprise customer journeys, federation, hybrid deployments, and advanced risk/fraud signals. | Heavier enterprise setup; lacks self-serve transparent micro-pricing tiers. |
+| **Stytch** *(acquired by Twilio)* | **$1.0B Series B Valuation** (~$12M–$14M ARR; acquired by Twilio) | Usage-based starting at **$0/month base** ($0.05/MAU or $0.10/B2B member above free tier allowance) | **Free forever up to 10,000 MAUs** (Unlimited B2B orgs, up to 5 SSO/SCIM connections, 1,000 M2M tokens, 10,000 device fingerprints; no feature gating) | API-first passwordless authentication, passkeys, device fingerprinting, and agentic identity orchestration. | Acquired by Twilio; smaller third-party ecosystem compared to legacy Okta/Auth0 catalogs. |
+| **Clerk** | **~$300M+ Valuation** (Series C raised $50M in late 2025; ~$15M–$30M ARR) | Pro from **$25/month** (Business from $300/month; Enterprise custom) | **Free forever up to 50,000 MRUs** (Monthly Retained Users; 3 admin seats, unlimited apps, custom domains, community support) | Prebuilt plug-and-play UI components for React, Next.js, and modern JS/TS web applications. | Primarily optimized for JavaScript/TypeScript stacks; less idiomatic for non-web backend protocols. |
+| **Descope** | **~$210M–$500M Est. Valuation** ($88M total funding; ~$10M–$14M est. ARR) | Pro from **$249/month** (Growth from $799/month; Enterprise custom) | **Free forever up to 7,500 MAUs** (Up to 10 tenants, 3 SSO connections, drag-and-drop workflow canvas, passwordless & MFA) | Visual no-code drag-and-drop authentication and authorization flow orchestration with fraud defense. | Newer platform; deep custom logic edge-cases may require code hooks outside visual designer. |
+| **FusionAuth** | **~$150M–$250M Est. Valuation** ($65M growth equity round; ~$15M–$30M est. ARR) | Starter Cloud from **$162/month** (Essentials from $2,970/month; Enterprise custom) | **Free forever with Unlimited MAUs** (Self-hosted Community Edition on Docker/Kubernetes/bare-metal with full OAuth/OIDC/SAML support) | Self-hostable or dedicated single-tenant cloud identity platform with predictable, volume-agnostic pricing. | Cloud tiers require baseline monthly spend; self-hosted free tier requires self-managing databases and upgrades. |
 
 ## Open-Source GitHub Projects
 
