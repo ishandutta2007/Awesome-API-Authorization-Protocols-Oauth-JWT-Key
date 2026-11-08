@@ -63,9 +63,9 @@ Below is a breakdown of prominent hosted identity and API authorization platform
 
 ## 💻 Open-Source Identity Engines & AuthZ Gateways
 
-Curated open-source identity providers, headless OAuth 2.0 / OIDC servers, token verification gateways, and policy engines. **Sorted in descending order by GitHub Stars.**
+Curated open-source identity providers, headless OAuth 2.0 / OIDC servers, token verification gateways, and policy engines. **Sorted in descending order by GitHub_Stars.**
 
-| Repository | GitHub Stars Badge | Primary Focus / Protocol Support | Tech Stack | License |
+| Repository | GitHub_Stars_Badge | Primary Focus / Protocol Support | Tech Stack | License |
 |---|---|---|---|---|
 | **[Keycloak](https://github.com/keycloak/keycloak)** 👑 | [![Keycloak Stars](https://img.shields.io/github/stars/keycloak/keycloak?style=social&color=white)](https://github.com/keycloak/keycloak/stargazers) | Full enterprise IAM & IdP, OAuth 2.0 / OIDC 1.0, SAML 2.0, LDAP/AD federation, User federation, SCIM 2.0 | Java (Quarkus) | Apache-2.0 |
 | **[Authelia](https://github.com/authelia/authelia)** 🛡️ | [![Authelia Stars](https://img.shields.io/github/stars/authelia/authelia?style=social&color=white)](https://github.com/authelia/authelia/stargazers) | Lightweight authentication and authorization server, companion proxy (Traefik/Nginx), OIDC Provider, 2FA/FIDO2 WebAuthn | Go, TypeScript | Apache-2.0 |
